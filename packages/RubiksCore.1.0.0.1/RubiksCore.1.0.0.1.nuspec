@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>RubiksCore</id>
+    <version>1.0.0.1</version>
+    <title>Rubiks Core</title>
+    <authors>Daniel Sandberg</authors>
+    <owners>Daniel Sandberg</owners>
+    <licenseUrl>http://rubiks.codeplex.com/license</licenseUrl>
+    <projectUrl>http://rubiks.codeplex.com/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Provides an implemented .NET class that represents a Rubiks cube.</description>
+    <summary>Provides an implemented .NET class that represents a Rubiks cube.</summary>
+    <copyright>Copyright (c) 2013 Daniel Sandberg, Walter Praca</copyright>
+    <language>en-US</language>
+  </metadata>
+</package>

@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{30CE3941-E1C1-4873-AC3E-19BFA347568E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TotalMove</RootNamespace>
+    <AssemblyName>CubeSolver</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="RubiksAlgorithmToolset">
+      <HintPath>..\packages\RubiksAlgorithmToolset.1.0.0.1\lib\net45\RubiksAlgorithmToolset.dll</HintPath>
+    </Reference>
+    <Reference Include="RubiksCore">
+      <HintPath>..\packages\RubiksCore.1.0.0.1\lib\net45\RubiksCore.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Front2LayersGoRight1.cs" />
+    <Compile Include="W20A.cs" />
+    <Compile Include="W23B.cs" />
+    <Compile Include="W24.cs" />
+    <Compile Include="W25A.cs" />
+    <Compile Include="W25B.cs" />
+    <Compile Include="W26.cs" />
+    <Compile Include="W27.cs" />
+    <Compile Include="W28.cs" />
+    <Compile Include="W29A.cs" />
+    <Compile Include="W29B.cs" />
+    <Compile Include="W30.cs" />
+    <Compile Include="W31.cs" />
+    <Compile Include="W32A.cs" />
+    <Compile Include="W32B.cs" />
+    <Compile Include="W33.cs" />
+    <Compile Include="W34.cs" />
+    <Compile Include="W35.cs" />
+    <Compile Include="W36.cs" />
+    <Compile Include="W37.cs" />
+    <Compile Include="W38A.cs" />
+    <Compile Include="W38B.cs" />
+    <Compile Include="W39.cs" />
+    <Compile Include="W40.cs" />
+    <Compile Include="W40C.cs" />
+    <Compile Include="ExampleMoves.cs" />
+    <Compile Include="W01.cs" />
+    <Compile Include="W02.cs" />
+    <Compile Include="W03A.cs" />
+    <Compile Include="W03B.cs" />
+    <Compile Include="W04.cs" />
+    <Compile Include="W05.cs" />
+    <Compile Include="W06.cs" />
+    <Compile Include="W07.cs" />
+    <Compile Include="W08.cs" />
+    <Compile Include="W09.cs" />
+    <Compile Include="W10A.cs" />
+    <Compile Include="RubiksCubeExtensions.cs" />
+    <Compile Include="TotalMove.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TotalMoveUpLeft.cs" />
+    <Compile Include="TotalMoveUpRight.cs" />
+    <Compile Include="TwoDPosition.cs" />
+    <Compile Include="W10B.cs" />
+    <Compile Include="W11.cs" />
+    <Compile Include="W12A.cs" />
+    <Compile Include="W12B.cs" />
+    <Compile Include="W13A.cs" />
+    <Compile Include="W13B.cs" />
+    <Compile Include="W14A.cs" />
+    <Compile Include="W14B.cs" />
+    <Compile Include="W15A.cs" />
+    <Compile Include="W15B.cs" />
+    <Compile Include="W16A.cs" />
+    <Compile Include="W16B.cs" />
+    <Compile Include="W17A.cs" />
+    <Compile Include="W17B.cs" />
+    <Compile Include="W18A.cs" />
+    <Compile Include="W18B.cs" />
+    <Compile Include="W19A.cs" />
+    <Compile Include="W19B.cs" />
+    <Compile Include="W20B.cs" />
+    <Compile Include="W21A.cs" />
+    <Compile Include="W21B.cs" />
+    <Compile Include="W22A.cs" />
+    <Compile Include="W22B.cs" />
+    <Compile Include="W23A.cs" />
+    <Compile Include="YAA.cs" />
+    <Compile Include="YAB.cs" />
+    <Compile Include="YDA.cs" />
+    <Compile Include="YDB.cs" />
+    <Compile Include="YE.cs" />
+    <Compile Include="YF.cs" />
+    <Compile Include="YGAA.cs" />
+    <Compile Include="YGAB.cs" />
+    <Compile Include="YGBA.cs" />
+    <Compile Include="YGBB.cs" />
+    <Compile Include="YH.cs" />
+    <Compile Include="YJA.cs" />
+    <Compile Include="YJB.cs" />
+    <Compile Include="YNA.cs" />
+    <Compile Include="YNB.cs" />
+    <Compile Include="YRA.cs" />
+    <Compile Include="YRB.cs" />
+    <Compile Include="YT.cs" />
+    <Compile Include="YV.cs" />
+    <Compile Include="YY.cs" />
+    <Compile Include="YZ.cs" />
+    <Compile Include="ZPhaseOne1.cs" />
+    <Compile Include="ZPhaseOne2.cs" />
+    <Compile Include="ZPhaseOne3.cs" />
+    <Compile Include="ZPhaseOne4.cs" />
+    <Compile Include="ZPhasePTwo1.cs" />
+    <Compile Include="ZPhasePTwo1Aux.cs" />
+    <Compile Include="ZPhasePTwo1Check.cs" />
+    <Compile Include="ZPhasePTwo2.cs" />
+    <Compile Include="ZPhaseThree.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
