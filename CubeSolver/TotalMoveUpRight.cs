@@ -14,7 +14,7 @@ namespace TotalMove
             get { return "Total Move Up Right"; }
         }
 
-        public string Author
+        public string Author 
         {
             get { return "Walter Praça"; }
         }
