@@ -7,12 +7,11 @@ using System.Threading.Tasks;
 
 namespace TotalMove
 {
-    class Front2LayersGoRight1 : ICubeSolvingAlgorithm
+    public class ZFren2Direita : ICubeSolvingAlgorithm
     {
-
         public string AlgorithmName
         {
-            get { return "Front2LayersGoRight1"; }
+            get { return "ZFren2Direita"; }
         }
 
         public string Author
@@ -22,13 +21,13 @@ namespace TotalMove
 
         public string Description
         {
-            get { return ""; }
+            get { return "Front Two-layer Go Right"; }
         }
 
         public void Solve(RubiksCore.RubiksCube cube)
         {
-            
+            cube.TurnFront(RubiksCore.TurningDirection.ThreeoClock, 1);
+
         }
     }
-
 }

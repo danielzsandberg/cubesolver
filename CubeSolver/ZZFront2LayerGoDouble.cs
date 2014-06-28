@@ -7,26 +7,27 @@ using System.Threading.Tasks;
 
 namespace TotalMove
 {
-    public class TotalMove : ICubeSolvingAlgorithm
+    public class ZZFront2LayerGoDouble : ICubeSolvingAlgorithm
     {
         public string AlgorithmName
         {
-            get { return "Total Move Front Right"; }
+            get { return "ZFront2LayerGoDouble"; }
         }
 
         public string Author
         {
-            get { return "Daniel Sandberg"; }
+            get { return "Walter Praça"; }
         }
 
         public string Description
         {
-            get { return "A total move"; }
+            get { return "Front Two-layer Double"; }
         }
 
         public void Solve(RubiksCore.RubiksCube cube)
         {
-            cube.TurnFront(RubiksCore.TurningDirection.ThreeoClock,2);
+            cube.TurnFront(RubiksCore.TurningDirection.SixoClock, 1);
+
         }
     }
 }

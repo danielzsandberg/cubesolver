@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace TotalMove
 {
-    public class ZPhasePTwo1Aux : ICubeSolvingAlgorithm
+    public class ZZFront2LayerGoRight : ICubeSolvingAlgorithm
     {
         public string AlgorithmName
         {
-            get { return "ZPhasePTwo1Aux"; }
+            get { return "ZFront2LayerGoRight"; }
         }
 
         public string Author
@@ -21,12 +21,13 @@ namespace TotalMove
 
         public string Description
         {
-            get { return "Auxiliar Code"; }
+            get { return "Front Two-layer Go Right"; }
         }
 
         public void Solve(RubiksCore.RubiksCube cube)
         {
-            cube.Run("ZPhasePTwo1");
+            cube.TurnFront(RubiksCore.TurningDirection.ThreeoClock, 1);
+
         }
     }
-}
+}B

@@ -45,7 +45,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Front2LayersGoRight1.cs" />
     <Compile Include="W20A.cs" />
     <Compile Include="W23B.cs" />
     <Compile Include="W24.cs" />
@@ -83,7 +82,7 @@
     <Compile Include="W09.cs" />
     <Compile Include="W10A.cs" />
     <Compile Include="RubiksCubeExtensions.cs" />
-    <Compile Include="TotalMove.cs" />
+    <Compile Include="YZZFaceUpToRight.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TotalMoveUpLeft.cs" />
     <Compile Include="TotalMoveUpRight.cs" />
@@ -133,15 +132,20 @@
     <Compile Include="YV.cs" />
     <Compile Include="YY.cs" />
     <Compile Include="YZ.cs" />
+    <Compile Include="ZFren2Direita.cs" />
+    <Compile Include="ZFren2Dupla.cs" />
+    <Compile Include="ZFren2Esquerda.cs" />
     <Compile Include="ZPhaseOne1.cs" />
     <Compile Include="ZPhaseOne2.cs" />
     <Compile Include="ZPhaseOne3.cs" />
     <Compile Include="ZPhaseOne4.cs" />
     <Compile Include="ZPhasePTwo1.cs" />
-    <Compile Include="ZPhasePTwo1Aux.cs" />
-    <Compile Include="ZPhasePTwo1Check.cs" />
     <Compile Include="ZPhasePTwo2.cs" />
+    <Compile Include="ZPhasePTwo3.cs" />
     <Compile Include="ZPhaseThree.cs" />
+    <Compile Include="ZPhaseUFour.cs" />
+    <Compile Include="ZPhaseUFourNewVersion1.cs" />
+    <Compile Include="ZZZZTemporary.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
