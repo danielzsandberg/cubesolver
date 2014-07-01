@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace TotalMove
 {
-    public class ZZZZTemporary : ICubeSolvingAlgorithm
+    public class ZZAutomatic2 : ICubeSolvingAlgorithm
     {
         public string AlgorithmName
         {
-            get { return "ZZZZTemporary"; }
+            get { return "ZZAutomatic2"; }
         }
 
         public string Author
@@ -21,17 +21,14 @@ namespace TotalMove
 
         public string Description
         {
-            get { return "Details"; }
+            get { return "Two Codes"; }
         }
 
         public void Solve(RubiksCore.RubiksCube cube)
         {
-            if (cube.GC(4, 6) == cube.GC(4, 1))
-            {
-                cube.TurnFront(RubiksCore.TurningDirection.SixoClock);
-                cube.TurnFront(RubiksCore.TurningDirection.SixoClock, 2);
-                cube.Run("YAA");
-            }
+            cube.Run("ZPhaseOne1");
+            cube.Run("ZPhasePTwo2");
+
         }
     }
 }

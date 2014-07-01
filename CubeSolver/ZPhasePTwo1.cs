@@ -26,7 +26,9 @@ namespace TotalMove
 
         public void Solve(RubiksCore.RubiksCube cube)
         {
-            //System.Diagnostics.Debugger.Launch();
+//System.Diagnostics.Debugger.Launch();
+//            int cntrl = 0;
+            
             startingish:
             
             int rpt = 1;
@@ -71,6 +73,9 @@ segue:
                         cube.TurnLeft(RubiksCore.TurningDirection.NineoClock);
                         cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
                         cube.TurnLeft(RubiksCore.TurningDirection.ThreeoClock);
+//                          cntrl = cntrl + 1;
+//                          if (cntrl == 4)
+//                              goto endish;
                     }
                 if (cube.GC(0, 3) == lup)
                     {
@@ -78,12 +83,18 @@ segue:
                         cube.TurnUp(RubiksCore.TurningDirection.NineoClock);
                         cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
                         cube.TurnUp(RubiksCore.TurningDirection.ThreeoClock);
+//                          cntrl = cntrl + 1;
+//                          if (cntrl == 4)
+//                              goto endish;
                     }
                 if (cube.GC(0, 3) == lri)
                     {
                         cube.TurnRight(RubiksCore.TurningDirection.NineoClock);
                         cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
                         cube.TurnRight(RubiksCore.TurningDirection.ThreeoClock);
+//                        cntrl = cntrl + 1;
+//                        if (cntrl == 4)
+//                            goto endish;
                     }
                 if (cube.GC(0, 3) == ldo)
                     {
@@ -91,6 +102,9 @@ segue:
                         cube.TurnDown(RubiksCore.TurningDirection.NineoClock);
                         cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
                         cube.TurnDown(RubiksCore.TurningDirection.ThreeoClock);
+//                        cntrl = cntrl + 1;
+//                        if (cntrl == 4)
+//                            goto endish;
                     }
             }
 //Second case
@@ -102,6 +116,9 @@ segue:
                         cube.TurnLeft(RubiksCore.TurningDirection.NineoClock);
                         cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
                         cube.TurnLeft(RubiksCore.TurningDirection.ThreeoClock);
+//                        cntrl = cntrl + 1;
+//                        if (cntrl == 4)
+//                            goto endish;
                     }
                 if (cube.GC(5, 0) == lup)
                     {
@@ -109,6 +126,9 @@ segue:
                         cube.TurnUp(RubiksCore.TurningDirection.NineoClock);
                         cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
                         cube.TurnUp(RubiksCore.TurningDirection.ThreeoClock);
+//                        cntrl = cntrl + 1;
+//                        if (cntrl == 4)
+//                            goto endish;
                     }
                 if (cube.GC(5, 0) == lri)
                     {
@@ -116,12 +136,18 @@ segue:
                         cube.TurnRight(RubiksCore.TurningDirection.NineoClock);
                         cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
                         cube.TurnRight(RubiksCore.TurningDirection.ThreeoClock);
+//                        cntrl = cntrl + 1;
+//                        if (cntrl == 4)
+//                            goto endish;
                     }
                 if (cube.GC(5, 0) == ldo)
                     {
                         cube.TurnDown(RubiksCore.TurningDirection.NineoClock);
                         cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
                         cube.TurnDown(RubiksCore.TurningDirection.ThreeoClock);
+//                        cntrl = cntrl + 1;
+//                        if (cntrl == 4)
+//                            goto endish;
                     }
             }
 //Third case
@@ -132,6 +158,9 @@ segue:
                         cube.TurnLeft(RubiksCore.TurningDirection.NineoClock);
                         cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
                         cube.TurnLeft(RubiksCore.TurningDirection.ThreeoClock);
+//                        cntrl = cntrl + 1;
+//                        if (cntrl == 4)
+//                            goto endish;
                     }
                 if (cube.GC(8, 5) == lup)
                     {
@@ -139,6 +168,9 @@ segue:
                         cube.TurnUp(RubiksCore.TurningDirection.NineoClock);
                         cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
                         cube.TurnUp(RubiksCore.TurningDirection.ThreeoClock);
+//                        cntrl = cntrl + 1;
+//                        if (cntrl == 4)
+//                            goto endish;
                     }
                 if (cube.GC(8, 5) == lri)
                     {
@@ -146,6 +178,9 @@ segue:
                         cube.TurnRight(RubiksCore.TurningDirection.NineoClock);
                         cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
                         cube.TurnRight(RubiksCore.TurningDirection.ThreeoClock);
+//                        cntrl = cntrl + 1;
+//                        if (cntrl == 4)
+//                            goto endish;
                     }
                 if (cube.GC(8, 5) == ldo)
                     {
@@ -153,6 +188,9 @@ segue:
                         cube.TurnDown(RubiksCore.TurningDirection.NineoClock);
                         cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
                         cube.TurnDown(RubiksCore.TurningDirection.ThreeoClock);
+//                        cntrl = cntrl + 1;
+//                        if (cntrl == 4)
+//                            goto endish;
                     }
             }
 //Fourth case
@@ -164,12 +202,18 @@ segue:
                         cube.TurnLeft(RubiksCore.TurningDirection.NineoClock);
                         cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
                         cube.TurnLeft(RubiksCore.TurningDirection.ThreeoClock);
+//                        cntrl = cntrl + 1;
+//                        if (cntrl == 4)
+//                            goto endish;
                     }
                 if (cube.GC(3, 8) == lup)
                     {
                         cube.TurnUp(RubiksCore.TurningDirection.NineoClock);
                         cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
                         cube.TurnUp(RubiksCore.TurningDirection.ThreeoClock);
+//                        cntrl = cntrl + 1;
+//                        if (cntrl == 4)
+//                            goto endish;
                     }
                 if (cube.GC(3, 8) == lri)
                     {
@@ -177,6 +221,9 @@ segue:
                         cube.TurnRight(RubiksCore.TurningDirection.NineoClock);
                         cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
                         cube.TurnRight(RubiksCore.TurningDirection.ThreeoClock);
+//                        cntrl = cntrl + 1;
+//                        if (cntrl == 4)
+//                            goto endish;
                     }
                 if (cube.GC(3, 8) == ldo)
                     {
@@ -184,6 +231,9 @@ segue:
                         cube.TurnDown(RubiksCore.TurningDirection.NineoClock);
                         cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
                         cube.TurnDown(RubiksCore.TurningDirection.ThreeoClock);
+//                        cntrl = cntrl + 1;
+//                        if (cntrl == 4)
+//                            goto endish;
                     }
             }
 //Fifth case
@@ -195,6 +245,9 @@ segue:
                         cube.TurnLeft(RubiksCore.TurningDirection.ThreeoClock);
                         cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
                         cube.TurnLeft(RubiksCore.TurningDirection.NineoClock);
+//                        cntrl = cntrl + 1;
+//                        if (cntrl == 4)
+//                            goto endish;
                     }
                 if (cube.GC(3, 0) == lup)
                     {
@@ -202,6 +255,9 @@ segue:
                         cube.TurnUp(RubiksCore.TurningDirection.ThreeoClock);
                         cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
                         cube.TurnUp(RubiksCore.TurningDirection.NineoClock);
+//                        cntrl = cntrl + 1;
+//                        if (cntrl == 4)
+//                            goto endish;
                     }
                 if (cube.GC(3, 0) == lri)
                     {
@@ -209,12 +265,18 @@ segue:
                         cube.TurnRight(RubiksCore.TurningDirection.ThreeoClock);
                         cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
                         cube.TurnRight(RubiksCore.TurningDirection.NineoClock);
+//                        cntrl = cntrl + 1;
+//                        if (cntrl == 4)
+//                            goto endish;
                     }
                 if (cube.GC(3, 0) == ldo)
                     {
                         cube.TurnDown(RubiksCore.TurningDirection.ThreeoClock);
                         cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
                         cube.TurnDown(RubiksCore.TurningDirection.NineoClock);
+//                        cntrl = cntrl + 1;
+//                        if (cntrl == 4)
+//                            goto endish;
                     }
             }
 //Sixth case
@@ -225,6 +287,9 @@ segue:
                         cube.TurnLeft(RubiksCore.TurningDirection.ThreeoClock);
                         cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
                         cube.TurnLeft(RubiksCore.TurningDirection.NineoClock);
+//                        cntrl = cntrl + 1;
+//                        if (cntrl == 4)
+//                            goto endish;
                     }
                 if (cube.GC(8, 3) == lup)
                     {
@@ -232,6 +297,9 @@ segue:
                         cube.TurnUp(RubiksCore.TurningDirection.ThreeoClock);
                         cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
                         cube.TurnUp(RubiksCore.TurningDirection.NineoClock);
+//                        cntrl = cntrl + 1;
+//                        if (cntrl == 4)
+//                            goto endish;
                     }
                 if (cube.GC(8, 3) == lri)
                     {
@@ -239,6 +307,9 @@ segue:
                         cube.TurnRight(RubiksCore.TurningDirection.ThreeoClock);
                         cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
                         cube.TurnRight(RubiksCore.TurningDirection.NineoClock);
+//                        cntrl = cntrl + 1;
+//                        if (cntrl == 4)
+//                            goto endish;
                     }
                 if (cube.GC(8, 3) == ldo)
                     {
@@ -246,6 +317,9 @@ segue:
                         cube.TurnDown(RubiksCore.TurningDirection.ThreeoClock);
                         cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
                         cube.TurnDown(RubiksCore.TurningDirection.NineoClock);
+//                        cntrl = cntrl + 1;
+//                        if (cntrl == 4)
+//                            goto endish;
                     }
             }
 //Seventh case
@@ -257,12 +331,18 @@ segue:
                         cube.TurnLeft(RubiksCore.TurningDirection.ThreeoClock);
                         cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
                         cube.TurnLeft(RubiksCore.TurningDirection.NineoClock);
+//                        cntrl = cntrl + 1;
+//                        if (cntrl == 4)
+//                            goto endish;
                     }
                 if (cube.GC(5, 8) == lup)
                     {
                         cube.TurnUp(RubiksCore.TurningDirection.ThreeoClock);
                         cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
                         cube.TurnUp(RubiksCore.TurningDirection.NineoClock);
+//                        cntrl = cntrl + 1;
+//                        if (cntrl == 4)
+//                            goto endish;
                     }
                 if (cube.GC(5, 8) == lri)
                     {
@@ -270,6 +350,9 @@ segue:
                         cube.TurnRight(RubiksCore.TurningDirection.ThreeoClock);
                         cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
                         cube.TurnRight(RubiksCore.TurningDirection.NineoClock);
+//                        cntrl = cntrl + 1;
+//                        if (cntrl == 4)
+//                            goto endish;
                     }
                 if (cube.GC(5, 8) == ldo)
                     {
@@ -277,6 +360,9 @@ segue:
                         cube.TurnDown(RubiksCore.TurningDirection.ThreeoClock);
                         cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
                         cube.TurnDown(RubiksCore.TurningDirection.NineoClock);
+//                        cntrl = cntrl + 1;
+//                        if (cntrl == 4)
+//                            goto endish;
                     }
             }
 //Eighth case
@@ -288,6 +374,9 @@ segue:
                         cube.TurnLeft(RubiksCore.TurningDirection.ThreeoClock);
                         cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
                         cube.TurnLeft(RubiksCore.TurningDirection.NineoClock);
+//                        cntrl = cntrl + 1;
+//                        if (cntrl == 4)
+//                            goto endish;
                     }
                 if (cube.GC(0, 5) == lup)
                     {
@@ -295,12 +384,18 @@ segue:
                         cube.TurnUp(RubiksCore.TurningDirection.ThreeoClock);
                         cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
                         cube.TurnUp(RubiksCore.TurningDirection.NineoClock);
+//                        cntrl = cntrl + 1;
+//                        if (cntrl == 4)
+//                            goto endish;
                     }
                 if (cube.GC(0, 5) == lri)
                     {
                         cube.TurnRight(RubiksCore.TurningDirection.ThreeoClock);
                         cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
                         cube.TurnRight(RubiksCore.TurningDirection.NineoClock);
+//                        cntrl = cntrl + 1;
+//                        if (cntrl == 4)
+//                            goto endish;
                     }
                 if (cube.GC(0, 5) == ldo)
                     {
@@ -308,6 +403,9 @@ segue:
                         cube.TurnDown(RubiksCore.TurningDirection.ThreeoClock);
                         cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
                         cube.TurnDown(RubiksCore.TurningDirection.NineoClock);
+//                        cntrl = cntrl + 1;
+//                        if (cntrl == 4)
+//                            goto endish;
                     }
             }
 }
@@ -389,61 +487,59 @@ while (rpt < 5);
                     cube.TurnRight(RubiksCore.TurningDirection.ThreeoClock);
                     goto startingish;  
                 }
+                if (cube.GC(5, 2) == cube.GC(4, 4))
+                {
+                    cube.TurnRight(RubiksCore.TurningDirection.ThreeoClock);
+                    cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
+                    cube.TurnRight(RubiksCore.TurningDirection.NineoClock);
+                    goto startingish;
+                }
             int rpu = 0;
             do
             {
                 rpu++;
 
-                if (cube.GC(9, 3) == cube.GC(4, 4) && cube.GC(5,3) != cube.GC(4, 4))
+                if (cube.GC(9, 3) == cube.GC(4, 4) && cube.GC(5, 3) != cube.GC(4, 4))
                 {
                     cube.TurnUp(RubiksCore.TurningDirection.NineoClock);
                     cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
                     cube.TurnUp(RubiksCore.TurningDirection.ThreeoClock);
                     goto startingish;
-                
-                    if (cube.GC(11, 3) == cube.GC(4, 4) && cube.GC(3,3) != cube.GC(4, 4))
-                    {
-                        cube.TurnUp(RubiksCore.TurningDirection.ThreeoClock);
-                        cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
-                        cube.TurnUp(RubiksCore.TurningDirection.NineoClock);
-                        goto startingish;
-                    
-                        if (cube.GC(11, 5) == cube.GC(4, 4) && cube.GC(3, 5) != cube.GC(4, 4))
-                        {
-                            cube.TurnDown(RubiksCore.TurningDirection.NineoClock);
-                            cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
-                            cube.TurnDown(RubiksCore.TurningDirection.ThreeoClock);
-                            goto startingish;
-                        
-                            if (cube.GC(9, 5) == cube.GC(4, 4) && cube.GC(5, 5) != cube.GC(4, 4))
-                            {
-                                cube.TurnDown(RubiksCore.TurningDirection.ThreeoClock);
-                                cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
-                                cube.TurnDown(RubiksCore.TurningDirection.NineoClock);
-                                goto startingish;
-                            }
-                        }
-                        else
-                        {
-                            cube.TurnBack(RubiksCore.TurningDirection.ThreeoClock);
-                        }
-                    }
-                    else
-                    {
-                        cube.TurnBack(RubiksCore.TurningDirection.ThreeoClock);
-                    }
                 }
-                else
+
+                if (cube.GC(11, 3) == cube.GC(4, 4) && cube.GC(3, 3) != cube.GC(4, 4))
                 {
-                    cube.TurnBack(RubiksCore.TurningDirection.ThreeoClock);
+                    cube.TurnUp(RubiksCore.TurningDirection.ThreeoClock);
+                    cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
+                    cube.TurnUp(RubiksCore.TurningDirection.NineoClock);
+                    goto startingish;
                 }
-            }
-            while (rpu < 5);
+
+                if (cube.GC(11, 5) == cube.GC(4, 4) && cube.GC(3, 5) != cube.GC(4, 4))
+                {
+                    cube.TurnDown(RubiksCore.TurningDirection.NineoClock);
+                    cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
+                    cube.TurnDown(RubiksCore.TurningDirection.ThreeoClock);
+                    goto startingish;
+                }
+
+                if (cube.GC(9, 5) == cube.GC(4, 4) && cube.GC(5, 5) != cube.GC(4, 4))
+                {
+                    cube.TurnDown(RubiksCore.TurningDirection.ThreeoClock);
+                    cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
+                    cube.TurnDown(RubiksCore.TurningDirection.NineoClock);
+                    goto startingish;
+                }
+                cube.TurnBack(RubiksCore.TurningDirection.ThreeoClock);
+            } while (rpu < 5);
+
             goto startingish;
-endish:
+            
+            endish:
+            
+            cube.Run("YAA"); 
+            cube.Run("YAB");       
             //cube.Run("ZPhasePTwo2");
-            cube.Run("YNA"); 
-            cube.Run("YNA");       
         }
     }
 }

@@ -205,8 +205,10 @@ antesnext:
                 rpu = rpu + 1;
                 goto startingish;
 endish:
+                cube.Run("TotalMoveUpLeft");
+                cube.Run("TotalMoveUpLeft");
                 cube.Run("ZPhaseThree");
-                //cube.Run("YNA");
+            //cube.Run("YNA");
                 //cube.Run("YNA");
 
             }

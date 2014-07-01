@@ -1213,7 +1213,7 @@ namespace TotalMove
                 cube.TurnFront(RubiksCore.TurningDirection.ThreeoClock);
                 cube.Run("W40");
             }
-            cube.Run("ZPhaseUFour");
+            cube.Run("ZPhaseUFourNewVersion");
         }
     }
 }
