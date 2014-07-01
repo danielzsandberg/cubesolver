@@ -174,9 +174,9 @@ namespace TotalMove
             Assembly assembly = Assembly.GetAssembly(typeof(RubiksCubeExtensions));
             Type matchingAlgorithm = assembly.GetExportedTypes().FirstOrDefault(type => type.Name == algorithmName);
 
-            ICubeSolvingAlgorithm algorithm = (ICubeSolvingAlgorithm)Activator.CreateInstance(matchingAlgorithm);
+            MethodInfo method = matchingAlgorithm.GetMethod("Solve");
 
-            algorithm.Solve(cube);
+            method.Invoke(Activator.CreateInstance(matchingAlgorithm), new object[] { cube });
         }
     }
 }
