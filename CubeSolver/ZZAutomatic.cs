@@ -32,7 +32,12 @@ namespace TotalMove
 //           do
 //           {
 //              rpt++;
+            //bool isSolved = cube.IsSolved;
 
+            //if(isSolved)
+            //{
+
+            //}
                 cube.Shuffle();
 
                 cube.Run("ZPhaseOne1");
