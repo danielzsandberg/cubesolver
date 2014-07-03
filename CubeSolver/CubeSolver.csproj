@@ -145,7 +145,7 @@
     <Compile Include="ZPhaseThree.cs" />
     <Compile Include="ZPhaseUFourNewVersion1.cs" />
     <Compile Include="ZZAutomatic.cs" />
-    <Compile Include="ZZAutomatic2.cs" />
+    <Compile Include="ZZZShuffle.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

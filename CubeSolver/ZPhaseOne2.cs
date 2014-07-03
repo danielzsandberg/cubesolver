@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace TotalMove
 {
-    public class ZPhaseOne2 : ICubeSolvingAlgorithm
+    public class ZPhaseOne2 //: ICubeSolvingAlgorithm
     {
         public string AlgorithmName
         {

@@ -26,14 +26,14 @@ namespace TotalMove
 
         public void Solve(RubiksCore.RubiksCube cube)
         {
-//System.Diagnostics.Debugger.Launch();
-//            int cntrl = 0;
+            //System.Diagnostics.Debugger.Launch();
+            //            int cntrl = 0;
             
             startingish:
             
             int rpt = 1;
-do
-{
+            do
+            {
                 var lfr = cube.GC(4, 4);
                 var lle = cube.GC(1, 4);
                 var lup = cube.GC(4, 1);
@@ -536,7 +536,7 @@ while (rpt < 5);
             goto startingish;
             
             endish:
-            
+
             cube.Run("YAA"); 
             cube.Run("YAB");       
             //cube.Run("ZPhasePTwo2");
