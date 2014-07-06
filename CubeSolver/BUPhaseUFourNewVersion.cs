@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace TotalMove
 {
-    public class ZPhaseUFourNewVersion //: ICubeSolvingAlgorithm
+    public class BUPhaseUFourNewVersion //: ICubeSolvingAlgorithm
     {
         public string AlgorithmName
         {
-            get { return "ZPhaseUFourNewVersion"; }
+            get { return "BUPhaseUFourNewVersion"; }
         }
 
         public string Author
@@ -26,7 +26,7 @@ namespace TotalMove
 
         public void Solve(RubiksCore.RubiksCube cube)
         {
-// Cube already solved
+            // Cube already solved
             if (cube.GC(4, 6) == cube.GC(3, 6) && cube.GC(4, 6) == cube.GC(5, 6))
             {
                 if (cube.GC(4, 2) == cube.GC(3, 2) && cube.GC(4, 2) == cube.GC(5, 2))
@@ -151,7 +151,7 @@ namespace TotalMove
                     }
                 }
             } while (llr < 5);
-// Solving end position DA
+            // Solving end position DA
             llr = 1;
             do
             {
@@ -196,7 +196,7 @@ namespace TotalMove
                     }
                 }
             } while (llr < 5);
-// Solving end position DB
+            // Solving end position DB
             llr = 1;
             do
             {
@@ -241,7 +241,7 @@ namespace TotalMove
                     }
                 }
             } while (llr < 5);
-// Solving end position E
+            // Solving end position E
             llr = 1;
             do
             {
@@ -286,7 +286,7 @@ namespace TotalMove
                     }
                 }
             } while (llr < 5);
-// Solving end position F
+            // Solving end position F
             llr = 1;
             do
             {
@@ -331,7 +331,7 @@ namespace TotalMove
                     }
                 }
             } while (llr < 5);
-// Solving end position GAA
+            // Solving end position GAA
             llr = 1;
             do
             {
@@ -376,7 +376,7 @@ namespace TotalMove
                     }
                 }
             } while (llr < 5);
-// Solving end position GAB
+            // Solving end position GAB
             llr = 1;
             do
             {
@@ -421,7 +421,7 @@ namespace TotalMove
                     }
                 }
             } while (llr < 5);
-// Solving end position GBA
+            // Solving end position GBA
             llr = 1;
             do
             {
@@ -466,7 +466,7 @@ namespace TotalMove
                     }
                 }
             } while (llr < 5);
-// Solving end position GBB
+            // Solving end position GBB
             llr = 1;
             do
             {
@@ -511,7 +511,7 @@ namespace TotalMove
                     }
                 }
             } while (llr < 5);
-// Solving end position H
+            // Solving end position H
             llr = 1;
             do
             {
@@ -556,7 +556,7 @@ namespace TotalMove
                     }
                 }
             } while (llr < 5);
-// Solving end position JA
+            // Solving end position JA
             llr = 1;
             do
             {
@@ -601,7 +601,7 @@ namespace TotalMove
                     }
                 }
             } while (llr < 5);
-// Solving end position JB
+            // Solving end position JB
             llr = 1;
             do
             {
@@ -646,7 +646,7 @@ namespace TotalMove
                     }
                 }
             } while (llr < 5);
-// Solving end position NA
+            // Solving end position NA
             llr = 1;
             do
             {
@@ -691,7 +691,7 @@ namespace TotalMove
                     }
                 }
             } while (llr < 5);
-// Solving end position NB
+            // Solving end position NB
             llr = 1;
             do
             {
@@ -736,7 +736,7 @@ namespace TotalMove
                     }
                 }
             } while (llr < 5);
-// Solving end position RA
+            // Solving end position RA
             llr = 1;
             do
             {
@@ -781,7 +781,7 @@ namespace TotalMove
                     }
                 }
             } while (llr < 5);
-// Solving end position RB
+            // Solving end position RB
             llr = 1;
             do
             {
@@ -826,7 +826,7 @@ namespace TotalMove
                     }
                 }
             } while (llr < 5);
-// Solving end position T
+            // Solving end position T
             llr = 1;
             do
             {
@@ -871,7 +871,7 @@ namespace TotalMove
                     }
                 }
             } while (llr < 5);
-// Solving end position V
+            // Solving end position V
             llr = 1;
             do
             {
@@ -916,7 +916,7 @@ namespace TotalMove
                     }
                 }
             } while (llr < 5);
-// Solving end position Y
+            // Solving end position Y
             llr = 1;
             do
             {
@@ -961,7 +961,7 @@ namespace TotalMove
                     }
                 }
             } while (llr < 5);
-// Solving end position Z
+            // Solving end position Z
             llr = 1;
             do
             {
@@ -1006,15 +1006,9 @@ namespace TotalMove
                     }
                 }
             } while (llr < 5);
-            endish:
-
-            if (cube.GC(4, 6) == cube.GC(4, 1))
-                { cube.TurnFront(RubiksCore.TurningDirection.SixoClock); }
-            if (cube.GC(4, 6) == cube.GC(1, 4))
-                { cube.TurnFront(RubiksCore.TurningDirection.ThreeoClock); }
-            if (cube.GC(4, 6) == cube.GC(7, 4))
-                { cube.TurnFront(RubiksCore.TurningDirection.NineoClock); }
-            
+        endish:
+            cube.TurnFront(RubiksCore.TurningDirection.SixoClock, 2);
+            cube.TurnFront(RubiksCore.TurningDirection.SixoClock, 2);
 
         }
     }

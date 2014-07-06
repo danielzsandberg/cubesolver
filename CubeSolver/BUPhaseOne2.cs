@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace TotalMove
 {
-    public class ZPhaseOne2 //: ICubeSolvingAlgorithm
+    public class BUPhaseOne2 //: ICubeSolvingAlgorithm
     {
         public string AlgorithmName
         {
-            get { return "ZPhaseOne2"; }
+            get { return "BUPhaseOne2"; }
         }
 
         public string Author
@@ -26,7 +26,7 @@ namespace TotalMove
 
         public void Solve(RubiksCore.RubiksCube cube)
         {
-            
+
             var lfr = cube.GC(4, 4);
             var lup = cube.GC(4, 1);
 
@@ -181,8 +181,8 @@ namespace TotalMove
                 goto endish;
             }
 
-            endish:
-            cube.Run("ZPhaseOne3");
+        endish:
+            cube.Run("BUPhaseOne3");
             //cube.Run("YAA");
             //cube.Run("YAB");
         }

@@ -47,6 +47,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUPhaseOne1.cs" />
+    <Compile Include="BUPhaseOne2.cs" />
+    <Compile Include="BUPhaseOne3.cs" />
+    <Compile Include="BUPhaseOne4.cs" />
+    <Compile Include="BUPhasePTwo1.cs" />
+    <Compile Include="BUPhasePTwo2.cs" />
+    <Compile Include="BUPhasePTwo3.cs" />
+    <Compile Include="BUPhaseThree.cs" />
+    <Compile Include="BUPhaseUFourNewVersion.cs" />
+    <Compile Include="BUZAutomatic.cs" />
     <Compile Include="W20A.cs" />
     <Compile Include="W23B.cs" />
     <Compile Include="W24.cs" />
@@ -84,7 +94,6 @@
     <Compile Include="W09.cs" />
     <Compile Include="W10A.cs" />
     <Compile Include="RubiksCubeExtensions.cs" />
-    <Compile Include="YZZFaceUpToRight.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TotalMoveUpLeft.cs" />
     <Compile Include="TotalMoveUpRight.cs" />
@@ -134,9 +143,6 @@
     <Compile Include="YV.cs" />
     <Compile Include="YY.cs" />
     <Compile Include="YZ.cs" />
-    <Compile Include="ZFren2Direita.cs" />
-    <Compile Include="ZFren2Dupla.cs" />
-    <Compile Include="ZFren2Esquerda.cs" />
     <Compile Include="ZPhaseOne1.cs" />
     <Compile Include="ZPhaseOne2.cs" />
     <Compile Include="ZPhaseOne3.cs" />
@@ -146,8 +152,6 @@
     <Compile Include="ZPhasePTwo3.cs" />
     <Compile Include="ZPhaseThree.cs" />
     <Compile Include="ZPhaseUFourNewVersion1.cs" />
-    <Compile Include="ZZAutomatic.cs" />
-    <Compile Include="ZZZShuffle.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

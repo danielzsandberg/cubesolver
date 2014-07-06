@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace TotalMove
 {
-    public class ZPhasePTwo1 : ICubeSolvingAlgorithm
+    public class ZPhasePTwo1 //: ICubeSolvingAlgorithm
     {
         public string AlgorithmName
         {
@@ -537,9 +537,17 @@ while (rpt < 5);
             
             endish:
 
-            cube.Run("YAA"); 
-            cube.Run("YAB");       
-            //cube.Run("ZPhasePTwo2");
+            if (cube.GC(3, 5) != cube.GC(4, 5))
+            {
+                cube.Shuffle();
+                cube.Run("ZPhaseOne1");
+            }
+
+
+
+            //cube.Run("YAA"); 
+            //cube.Run("YAB");       
+            cube.Run("ZPhasePTwo2");
         }
     }
 }

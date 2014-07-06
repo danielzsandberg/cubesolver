@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace TotalMove
 {
-    public class ZPhaseThree //: ICubeSolvingAlgorithm
+    public class BUPhaseThree //: ICubeSolvingAlgorithm
     {
         public string AlgorithmName
         {
-            get { return "ZPhaseThree"; }
+            get { return "BUPhaseThree"; }
         }
 
         public string Author
@@ -1214,14 +1214,10 @@ namespace TotalMove
                 cube.Run("W40");
             }
 
-            if (cube.GC(3, 3) != cube.GC(4, 4) || cube.GC(4, 3) != cube.GC(4, 4) || cube.GC(5, 3) != cube.GC(4, 4))
-                { cube.Run("ZPhaseOne1"); }
-            if (cube.GC(3, 4) != cube.GC(4, 4) || cube.GC(5, 4) != cube.GC(4, 4))
-                { cube.Run("ZPhaseOne1"); }
-            if (cube.GC(3, 5) != cube.GC(4, 4) || cube.GC(4, 5) != cube.GC(4, 4) || cube.GC(5, 5) != cube.GC(4, 4))
-                { cube.Run("ZPhaseOne1"); }
-            
-            cube.Run("ZPhaseUFourNewVersion");
+            //            if (cube.GC(4, 3) != cube.GC(4, 4))
+            //                { cube.Run("ZZAutomatic"); }
+
+            cube.Run("BUPhaseUFourNewVersion");
             //cube.Run("YAA");
             //cube.Run("YAB");
         }

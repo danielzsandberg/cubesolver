@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace TotalMove
 {
-    public class ZPhasePTwo3 //: ICubeSolvingAlgorithm
+    public class BUPhasePTwo3 //: ICubeSolvingAlgorithm
     {
         public string AlgorithmName
         {
-            get { return "ZPhasePTwo3"; }
+            get { return "BUPhasePTwo3"; }
         }
 
         public string Author
@@ -34,10 +34,10 @@ namespace TotalMove
             var ldo = cube.GC(4, 7);
             var lba = cube.GC(10, 4);
 
-           int rpt = 1;
-           int rpu = 1;
- 
-startingish:
+            int rpt = 1;
+            int rpu = 1;
+
+        startingish:
             if (cube.GC(1, 5) != lle || cube.GC(1, 3) != lle || cube.GC(7, 5) != lri || cube.GC(7, 3) != lri)
             { goto segue; }
             if (cube.GC(3, 1) != lup || cube.GC(5, 1) != lup || cube.GC(3, 7) != ldo || cube.GC(5, 7) != ldo)
@@ -45,18 +45,18 @@ startingish:
             else
             { goto endish; }
 
-segue:                
-            
+        segue:
+
             if (cube.GC(10, 3) == lba || cube.GC(4, 0) == lba)
             {
                 cube.TurnBack(RubiksCore.TurningDirection.ThreeoClock);
-                    if (rpt == 4)
-                    {goto endish;}
-                rpt = rpt+1;
+                if (rpt == 4)
+                { goto endish; }
+                rpt = rpt + 1;
                 goto segue;
             }
             else
-            {}
+            { }
 
             if (cube.GC(10, 3) == lle)
             {
@@ -74,8 +74,8 @@ segue:
                 goto vai3;
             }
             if (cube.GC(10, 3) == ldo)
-            {goto vai4;}
-vai1:
+            { goto vai4; }
+        vai1:
             if (cube.GC(8, 4) == ldo)
             {
                 cube.TurnLeft(RubiksCore.TurningDirection.ThreeoClock);
@@ -98,8 +98,8 @@ vai1:
                 cube.TurnUp(RubiksCore.TurningDirection.NineoClock);
                 goto antesnext;
             }
-            
-vai2:
+
+        vai2:
             if (cube.GC(4, 8) == lle)
             {
                 cube.TurnUp(RubiksCore.TurningDirection.ThreeoClock);
@@ -122,7 +122,7 @@ vai2:
                 cube.TurnRight(RubiksCore.TurningDirection.NineoClock);
                 goto antesnext;
             }
-vai3:
+        vai3:
             if (cube.GC(0, 4) == lup)
             {
                 cube.TurnRight(RubiksCore.TurningDirection.ThreeoClock);
@@ -146,7 +146,7 @@ vai3:
                 goto antesnext;
             }
 
-vai4:
+        vai4:
             if (cube.GC(4, 0) == lri)
             {
                 cube.TurnDown(RubiksCore.TurningDirection.ThreeoClock);
@@ -168,35 +168,37 @@ vai4:
                 cube.TurnBack(RubiksCore.TurningDirection.NineoClock);
                 cube.TurnLeft(RubiksCore.TurningDirection.NineoClock);
             }
-antesnext:
-                if (rpu == 6)
-                {goto endish;}
+        antesnext:
+            if (rpu == 6)
+            { goto endish; }
 
-                rpu = rpu + 1;
-                goto startingish;
-endish:
+            rpu = rpu + 1;
+            goto startingish;
+        endish:
 
-                cube.Run("TotalMoveUpLeft");
-                cube.Run("TotalMoveUpLeft");
+            cube.Run("TotalMoveUpLeft");
+            cube.Run("TotalMoveUpLeft");
+            
+// BOTH THE TWO FOLLOWINT if's ARE CORRECTION if's AND SHOULD BE ADDED TO THE ORIGINAL ZPhasePTwo3.
 
-                if (cube.GC(5, 1) != cube.GC(4, 1) || cube.GC(3, 1) != cube.GC(4, 1) || cube.GC(1, 3) != cube.GC(1, 4) || cube.GC(1, 5) != cube.GC(1, 4))
-                {
-                    cube.Shuffle();
-                    cube.Run("ZPhaseOne1");
-                }
-                if (cube.GC(5, 7) != cube.GC(4, 7) || cube.GC(3, 7) != cube.GC(4, 7) || cube.GC(7, 3) != cube.GC(7, 4) || cube.GC(7, 5) != cube.GC(7, 4))
-                {
-                    cube.Shuffle();
-                    cube.Run("ZPhaseOne1");
-                }
-
-                cube.Run("ZPhaseThree");
-                //cube.Run("YAA");
-                //cube.Run("YAB");
-
+            if (cube.GC(5, 1) != cube.GC(4, 1) || cube.GC(3, 1) != cube.GC(4, 1) || cube.GC(1, 3) != cube.GC(1, 4) || cube.GC(1, 5) != cube.GC(1, 4))
+            {
+                cube.Shuffle();
+                cube.Run("BUPhaseOne1");
             }
+            if (cube.GC(5, 7) != cube.GC(4, 7) || cube.GC(3, 7) != cube.GC(4, 7) || cube.GC(7, 3) != cube.GC(7, 4) || cube.GC(7, 5) != cube.GC(7, 4))
+            {
+                cube.Shuffle();
+                cube.Run("BUPhaseOne1");
+            }
+            
+            cube.Run("BUPhaseThree");
+            //cube.Run("YAA");
+            //cube.Run("YAB");
+
         }
     }
+}
 
 
 
