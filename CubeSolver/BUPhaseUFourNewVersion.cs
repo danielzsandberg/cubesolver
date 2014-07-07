@@ -1007,8 +1007,13 @@ namespace TotalMove
                 }
             } while (llr < 5);
         endish:
-            cube.TurnFront(RubiksCore.TurningDirection.SixoClock, 2);
-            cube.TurnFront(RubiksCore.TurningDirection.SixoClock, 2);
+
+            if (cube.GC(4, 6) == cube.GC(4, 1))
+            { cube.TurnFront(RubiksCore.TurningDirection.SixoClock); }
+            if (cube.GC(4, 6) == cube.GC(1, 4))
+            { cube.TurnFront(RubiksCore.TurningDirection.ThreeoClock); }
+            if (cube.GC(4, 6) == cube.GC(7, 4))
+            { cube.TurnFront(RubiksCore.TurningDirection.NineoClock); }
 
         }
     }

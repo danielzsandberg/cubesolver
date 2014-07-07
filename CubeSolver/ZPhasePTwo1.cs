@@ -27,10 +27,15 @@ namespace TotalMove
         public void Solve(RubiksCore.RubiksCube cube)
         {
             //System.Diagnostics.Debugger.Launch();
-            //            int cntrl = 0;
-            
-            startingish:
-            
+//            int cntrl = 0;
+
+            int vfr = 1;
+            int vfl = 1;
+        startingish:
+            vfr++;
+            if (vfr == 50)
+            { cube.Run("ZPhaseOne1"); }
+
             int rpt = 1;
             do
             {
@@ -59,7 +64,11 @@ namespace TotalMove
                 {goto segue;}            
             if (cube.GC(5, 6) == ldo)
                 {goto endish;}            
-segue:            
+segue:
+            vfl++;
+            if (vfl == 50)
+            { cube.Run("ZPhaseOne1"); }
+
             {
                 rpt++;
             } 

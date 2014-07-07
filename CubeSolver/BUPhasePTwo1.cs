@@ -27,10 +27,13 @@ namespace TotalMove
         public void Solve(RubiksCore.RubiksCube cube)
         {
         //System.Diagnostics.Debugger.Launch();
-        //            int cntrl = 0;
-
+                   // int cntrl = 0;
+        int vfr = 1;
+        int vfl = 1;
             startingish:
-
+        vfr++;
+            if (vfr == 50)
+                { cube.Run("BUPhaseOne1"); }
             int rpt = 1;
             do
             {
@@ -60,6 +63,10 @@ namespace TotalMove
                 if (cube.GC(5, 6) == ldo)
                 { goto endish; }
             segue:
+                vfl++;
+                if(vfl == 50)
+                { cube.Run("BUPhaseOne1"); }
+                
                 {
                     rpt++;
                 }
@@ -73,9 +80,11 @@ namespace TotalMove
                         cube.TurnLeft(RubiksCore.TurningDirection.NineoClock);
                         cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
                         cube.TurnLeft(RubiksCore.TurningDirection.ThreeoClock);
-                        //                          cntrl = cntrl + 1;
-                        //                          if (cntrl == 4)
-                        //                              goto endish;
+                        //cntrl = cntrl++;
+                        //    if (cntrl == 8)
+                        //    {
+                        //        goto endish;
+                        //    }                   
                     }
                     if (cube.GC(0, 3) == lup)
                     {
@@ -83,18 +92,22 @@ namespace TotalMove
                         cube.TurnUp(RubiksCore.TurningDirection.NineoClock);
                         cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
                         cube.TurnUp(RubiksCore.TurningDirection.ThreeoClock);
-                        //                          cntrl = cntrl + 1;
-                        //                          if (cntrl == 4)
-                        //                              goto endish;
+                        //cntrl = cntrl++;
+                        //    if (cntrl == 8)
+                        //    {
+                        //        goto endish;
+                        //    }                   
                     }
                     if (cube.GC(0, 3) == lri)
                     {
                         cube.TurnRight(RubiksCore.TurningDirection.NineoClock);
                         cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
                         cube.TurnRight(RubiksCore.TurningDirection.ThreeoClock);
-                        //                        cntrl = cntrl + 1;
-                        //                        if (cntrl == 4)
-                        //                            goto endish;
+                        //cntrl = cntrl++;
+                        //    if (cntrl == 8)
+                        //    {
+                        //        goto endish;
+                        //    }                   
                     }
                     if (cube.GC(0, 3) == ldo)
                     {
@@ -102,9 +115,11 @@ namespace TotalMove
                         cube.TurnDown(RubiksCore.TurningDirection.NineoClock);
                         cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
                         cube.TurnDown(RubiksCore.TurningDirection.ThreeoClock);
-                        //                        cntrl = cntrl + 1;
-                        //                        if (cntrl == 4)
-                        //                            goto endish;
+                        //cntrl = cntrl++;
+                        //    if (cntrl == 8)
+                        //    {
+                        //        goto endish;
+                        //    }                   
                     }
                 }
                 //Second case
@@ -116,9 +131,11 @@ namespace TotalMove
                         cube.TurnLeft(RubiksCore.TurningDirection.NineoClock);
                         cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
                         cube.TurnLeft(RubiksCore.TurningDirection.ThreeoClock);
-                        //                        cntrl = cntrl + 1;
-                        //                        if (cntrl == 4)
-                        //                            goto endish;
+                        //cntrl = cntrl++;
+                        //    if (cntrl == 8)
+                        //    {
+                        //        goto endish;
+                        //    }                   
                     }
                     if (cube.GC(5, 0) == lup)
                     {
@@ -126,9 +143,11 @@ namespace TotalMove
                         cube.TurnUp(RubiksCore.TurningDirection.NineoClock);
                         cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
                         cube.TurnUp(RubiksCore.TurningDirection.ThreeoClock);
-                        //                        cntrl = cntrl + 1;
-                        //                        if (cntrl == 4)
-                        //                            goto endish;
+                        //cntrl = cntrl++;
+                        //    if (cntrl == 8)
+                        //    {
+                        //        goto endish;
+                        //    }                   
                     }
                     if (cube.GC(5, 0) == lri)
                     {
@@ -136,18 +155,22 @@ namespace TotalMove
                         cube.TurnRight(RubiksCore.TurningDirection.NineoClock);
                         cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
                         cube.TurnRight(RubiksCore.TurningDirection.ThreeoClock);
-                        //                        cntrl = cntrl + 1;
-                        //                        if (cntrl == 4)
-                        //                            goto endish;
+                        //cntrl = cntrl++;
+                        //    if (cntrl == 8)
+                        //    {
+                        //        goto endish;
+                        //    }                   
                     }
                     if (cube.GC(5, 0) == ldo)
                     {
                         cube.TurnDown(RubiksCore.TurningDirection.NineoClock);
                         cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
                         cube.TurnDown(RubiksCore.TurningDirection.ThreeoClock);
-                        //                        cntrl = cntrl + 1;
-                        //                        if (cntrl == 4)
-                        //                            goto endish;
+                        //cntrl = cntrl++;
+                        //    if (cntrl == 8)
+                        //    {
+                        //        goto endish;
+                        //    }                   
                     }
                 }
                 //Third case
@@ -158,9 +181,11 @@ namespace TotalMove
                         cube.TurnLeft(RubiksCore.TurningDirection.NineoClock);
                         cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
                         cube.TurnLeft(RubiksCore.TurningDirection.ThreeoClock);
-                        //                        cntrl = cntrl + 1;
-                        //                        if (cntrl == 4)
-                        //                            goto endish;
+                        //cntrl = cntrl++;
+                        //    if (cntrl == 8)
+                        //    {
+                        //        goto endish;
+                        //    }                   
                     }
                     if (cube.GC(8, 5) == lup)
                     {
@@ -168,9 +193,11 @@ namespace TotalMove
                         cube.TurnUp(RubiksCore.TurningDirection.NineoClock);
                         cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
                         cube.TurnUp(RubiksCore.TurningDirection.ThreeoClock);
-                        //                        cntrl = cntrl + 1;
-                        //                        if (cntrl == 4)
-                        //                            goto endish;
+                        //cntrl = cntrl++;
+                        //    if (cntrl == 8)
+                        //    {
+                        //        goto endish;
+                        //    }                   
                     }
                     if (cube.GC(8, 5) == lri)
                     {
@@ -178,9 +205,11 @@ namespace TotalMove
                         cube.TurnRight(RubiksCore.TurningDirection.NineoClock);
                         cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
                         cube.TurnRight(RubiksCore.TurningDirection.ThreeoClock);
-                        //                        cntrl = cntrl + 1;
-                        //                        if (cntrl == 4)
-                        //                            goto endish;
+                        //cntrl = cntrl++;
+                        //    if (cntrl == 8)
+                        //    {
+                        //        goto endish;
+                        //    }                   
                     }
                     if (cube.GC(8, 5) == ldo)
                     {
@@ -188,9 +217,11 @@ namespace TotalMove
                         cube.TurnDown(RubiksCore.TurningDirection.NineoClock);
                         cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
                         cube.TurnDown(RubiksCore.TurningDirection.ThreeoClock);
-                        //                        cntrl = cntrl + 1;
-                        //                        if (cntrl == 4)
-                        //                            goto endish;
+                        //cntrl = cntrl++;
+                        //    if (cntrl == 8)
+                        //    {
+                        //        goto endish;
+                        //    }                   
                     }
                 }
                 //Fourth case
@@ -202,18 +233,22 @@ namespace TotalMove
                         cube.TurnLeft(RubiksCore.TurningDirection.NineoClock);
                         cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
                         cube.TurnLeft(RubiksCore.TurningDirection.ThreeoClock);
-                        //                        cntrl = cntrl + 1;
-                        //                        if (cntrl == 4)
-                        //                            goto endish;
+                        //cntrl = cntrl++;
+                        //    if (cntrl == 8)
+                        //    {
+                        //        goto endish;
+                        //    }                   
                     }
                     if (cube.GC(3, 8) == lup)
                     {
                         cube.TurnUp(RubiksCore.TurningDirection.NineoClock);
                         cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
                         cube.TurnUp(RubiksCore.TurningDirection.ThreeoClock);
-                        //                        cntrl = cntrl + 1;
-                        //                        if (cntrl == 4)
-                        //                            goto endish;
+                        //cntrl = cntrl++;
+                        //    if (cntrl == 8)
+                        //    {
+                        //        goto endish;
+                        //    }                   
                     }
                     if (cube.GC(3, 8) == lri)
                     {
@@ -221,9 +256,11 @@ namespace TotalMove
                         cube.TurnRight(RubiksCore.TurningDirection.NineoClock);
                         cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
                         cube.TurnRight(RubiksCore.TurningDirection.ThreeoClock);
-                        //                        cntrl = cntrl + 1;
-                        //                        if (cntrl == 4)
-                        //                            goto endish;
+                        //cntrl = cntrl++;
+                        //    if (cntrl == 8)
+                        //    {
+                        //        goto endish;
+                        //    }                   
                     }
                     if (cube.GC(3, 8) == ldo)
                     {
@@ -231,9 +268,11 @@ namespace TotalMove
                         cube.TurnDown(RubiksCore.TurningDirection.NineoClock);
                         cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
                         cube.TurnDown(RubiksCore.TurningDirection.ThreeoClock);
-                        //                        cntrl = cntrl + 1;
-                        //                        if (cntrl == 4)
-                        //                            goto endish;
+                        //cntrl = cntrl++;
+                        //    if (cntrl == 8)
+                        //    {
+                        //        goto endish;
+                        //    }                   
                     }
                 }
                 //Fifth case
@@ -245,9 +284,11 @@ namespace TotalMove
                         cube.TurnLeft(RubiksCore.TurningDirection.ThreeoClock);
                         cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
                         cube.TurnLeft(RubiksCore.TurningDirection.NineoClock);
-                        //                        cntrl = cntrl + 1;
-                        //                        if (cntrl == 4)
-                        //                            goto endish;
+                        //cntrl = cntrl++;
+                        //    if (cntrl == 8)
+                        //    {
+                        //        goto endish;
+                        //    }                   
                     }
                     if (cube.GC(3, 0) == lup)
                     {
@@ -255,9 +296,11 @@ namespace TotalMove
                         cube.TurnUp(RubiksCore.TurningDirection.ThreeoClock);
                         cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
                         cube.TurnUp(RubiksCore.TurningDirection.NineoClock);
-                        //                        cntrl = cntrl + 1;
-                        //                        if (cntrl == 4)
-                        //                            goto endish;
+                        //cntrl = cntrl++;
+                        //    if (cntrl == 8)
+                        //    {
+                        //        goto endish;
+                        //    }                   
                     }
                     if (cube.GC(3, 0) == lri)
                     {
@@ -265,18 +308,22 @@ namespace TotalMove
                         cube.TurnRight(RubiksCore.TurningDirection.ThreeoClock);
                         cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
                         cube.TurnRight(RubiksCore.TurningDirection.NineoClock);
-                        //                        cntrl = cntrl + 1;
-                        //                        if (cntrl == 4)
-                        //                            goto endish;
+                        //cntrl = cntrl++;
+                        //    if (cntrl == 8)
+                        //    {
+                        //        goto endish;
+                        //    }                   
                     }
                     if (cube.GC(3, 0) == ldo)
                     {
                         cube.TurnDown(RubiksCore.TurningDirection.ThreeoClock);
                         cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
                         cube.TurnDown(RubiksCore.TurningDirection.NineoClock);
-                        //                        cntrl = cntrl + 1;
-                        //                        if (cntrl == 4)
-                        //                            goto endish;
+                        //cntrl = cntrl++;
+                        //    if (cntrl == 8)
+                        //    {
+                        //        goto endish;
+                        //    }                   
                     }
                 }
                 //Sixth case
@@ -287,9 +334,11 @@ namespace TotalMove
                         cube.TurnLeft(RubiksCore.TurningDirection.ThreeoClock);
                         cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
                         cube.TurnLeft(RubiksCore.TurningDirection.NineoClock);
-                        //                        cntrl = cntrl + 1;
-                        //                        if (cntrl == 4)
-                        //                            goto endish;
+                        //cntrl = cntrl++;
+                        //    if (cntrl == 8)
+                        //    {
+                        //        goto endish;
+                        //    }                   
                     }
                     if (cube.GC(8, 3) == lup)
                     {
@@ -297,9 +346,11 @@ namespace TotalMove
                         cube.TurnUp(RubiksCore.TurningDirection.ThreeoClock);
                         cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
                         cube.TurnUp(RubiksCore.TurningDirection.NineoClock);
-                        //                        cntrl = cntrl + 1;
-                        //                        if (cntrl == 4)
-                        //                            goto endish;
+                        //cntrl = cntrl++;
+                        //    if (cntrl == 8)
+                        //    {
+                        //        goto endish;
+                        //    }                   
                     }
                     if (cube.GC(8, 3) == lri)
                     {
@@ -307,9 +358,11 @@ namespace TotalMove
                         cube.TurnRight(RubiksCore.TurningDirection.ThreeoClock);
                         cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
                         cube.TurnRight(RubiksCore.TurningDirection.NineoClock);
-                        //                        cntrl = cntrl + 1;
-                        //                        if (cntrl == 4)
-                        //                            goto endish;
+                        //cntrl = cntrl++;
+                        //    if (cntrl == 8)
+                        //    {
+                        //        goto endish;
+                        //    }                   
                     }
                     if (cube.GC(8, 3) == ldo)
                     {
@@ -317,9 +370,11 @@ namespace TotalMove
                         cube.TurnDown(RubiksCore.TurningDirection.ThreeoClock);
                         cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
                         cube.TurnDown(RubiksCore.TurningDirection.NineoClock);
-                        //                        cntrl = cntrl + 1;
-                        //                        if (cntrl == 4)
-                        //                            goto endish;
+                        //cntrl = cntrl++;
+                        //    if (cntrl == 8)
+                        //    {
+                        //        goto endish;
+                        //    }                   
                     }
                 }
                 //Seventh case
@@ -331,18 +386,22 @@ namespace TotalMove
                         cube.TurnLeft(RubiksCore.TurningDirection.ThreeoClock);
                         cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
                         cube.TurnLeft(RubiksCore.TurningDirection.NineoClock);
-                        //                        cntrl = cntrl + 1;
-                        //                        if (cntrl == 4)
-                        //                            goto endish;
+                        //cntrl = cntrl++;
+                        //    if (cntrl == 8)
+                        //    {
+                        //        goto endish;
+                        //    }                   
                     }
                     if (cube.GC(5, 8) == lup)
                     {
                         cube.TurnUp(RubiksCore.TurningDirection.ThreeoClock);
                         cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
                         cube.TurnUp(RubiksCore.TurningDirection.NineoClock);
-                        //                        cntrl = cntrl + 1;
-                        //                        if (cntrl == 4)
-                        //                            goto endish;
+                        //cntrl = cntrl++;
+                        //    if (cntrl == 8)
+                        //    {
+                        //        goto endish;
+                        //    }                   
                     }
                     if (cube.GC(5, 8) == lri)
                     {
@@ -350,9 +409,11 @@ namespace TotalMove
                         cube.TurnRight(RubiksCore.TurningDirection.ThreeoClock);
                         cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
                         cube.TurnRight(RubiksCore.TurningDirection.NineoClock);
-                        //                        cntrl = cntrl + 1;
-                        //                        if (cntrl == 4)
-                        //                            goto endish;
+                        //cntrl = cntrl++;
+                        //    if (cntrl == 8)
+                        //    {
+                        //        goto endish;
+                        //    }                   
                     }
                     if (cube.GC(5, 8) == ldo)
                     {
@@ -360,9 +421,11 @@ namespace TotalMove
                         cube.TurnDown(RubiksCore.TurningDirection.ThreeoClock);
                         cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
                         cube.TurnDown(RubiksCore.TurningDirection.NineoClock);
-                        //                        cntrl = cntrl + 1;
-                        //                        if (cntrl == 4)
-                        //                            goto endish;
+                        //cntrl = cntrl++;
+                        //    if (cntrl == 8)
+                        //    {
+                        //        goto endish;
+                        //    }                   
                     }
                 }
                 //Eighth case
@@ -374,9 +437,11 @@ namespace TotalMove
                         cube.TurnLeft(RubiksCore.TurningDirection.ThreeoClock);
                         cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
                         cube.TurnLeft(RubiksCore.TurningDirection.NineoClock);
-                        //                        cntrl = cntrl + 1;
-                        //                        if (cntrl == 4)
-                        //                            goto endish;
+                        //cntrl = cntrl++;
+                        //    if (cntrl == 8)
+                        //    {
+                        //        goto endish;
+                        //    }                   
                     }
                     if (cube.GC(0, 5) == lup)
                     {
@@ -384,18 +449,22 @@ namespace TotalMove
                         cube.TurnUp(RubiksCore.TurningDirection.ThreeoClock);
                         cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
                         cube.TurnUp(RubiksCore.TurningDirection.NineoClock);
-                        //                        cntrl = cntrl + 1;
-                        //                        if (cntrl == 4)
-                        //                            goto endish;
+                        //cntrl = cntrl++;
+                        //    if (cntrl == 8)
+                        //    {
+                        //        goto endish;
+                        //    }                   
                     }
                     if (cube.GC(0, 5) == lri)
                     {
                         cube.TurnRight(RubiksCore.TurningDirection.ThreeoClock);
                         cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
                         cube.TurnRight(RubiksCore.TurningDirection.NineoClock);
-                        //                        cntrl = cntrl + 1;
-                        //                        if (cntrl == 4)
-                        //                            goto endish;
+                        //cntrl = cntrl++;
+                        //    if (cntrl == 8)
+                        //    {
+                        //        goto endish;
+                        //    }                   
                     }
                     if (cube.GC(0, 5) == ldo)
                     {
@@ -403,13 +472,17 @@ namespace TotalMove
                         cube.TurnDown(RubiksCore.TurningDirection.ThreeoClock);
                         cube.TurnBack(RubiksCore.TurningDirection.SixoClock);
                         cube.TurnDown(RubiksCore.TurningDirection.NineoClock);
-                        //                        cntrl = cntrl + 1;
-                        //                        if (cntrl == 4)
-                        //                            goto endish;
+                        //cntrl = cntrl++;
+                        //    if (cntrl == 8)
+                        //    {
+                        //        goto endish;
+                        //    }                   
                     }
                 }
             }
             while (rpt < 5);
+
+            
             if (cube.GC(3, 3) == cube.GC(4, 4) && cube.GC(3, 2) != cube.GC(4, 1))
             {
                 cube.TurnLeft(RubiksCore.TurningDirection.NineoClock);
@@ -536,20 +609,18 @@ namespace TotalMove
             goto startingish;
 
         endish:
-//FOLLOWING if IS A CORRECTION TO BE APPLIED TO THE ORIGINAL
 
             if (cube.GC(3, 5) != cube.GC(4, 5))
             {
-                cube.Shuffle();
-                cube.Run("BUPhaseOne1");
+               cube.Shuffle();
+               cube.Run("BUPhaseOne1");
             }
- 
-            
-            
-            
+
+
+
             //cube.Run("YAA"); 
             //cube.Run("YAB");       
-            cube.Run("BUPhasePTwo2");
+            //cube.Run("BUPhasePTwo2");
         }
     }
 }
