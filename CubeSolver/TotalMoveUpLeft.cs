@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace TotalMove
 {
-    public class TotalMoveUpLeft : ICubeSolvingAlgorithm
+    public class TotalMoveUpLeft //: ICubeSolvingAlgorithm
     {
         public string AlgorithmName
         {

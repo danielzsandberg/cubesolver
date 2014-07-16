@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>RubiksAlgorithmToolset</id>
+    <version>1.0.0.2</version>
+    <title>Rubiks Algorithm Toolset</title>
+    <authors>Daniel Sandberg</authors>
+    <owners>Daniel Sandberg</owners>
+    <licenseUrl>http://rubiks.codeplex.com/license</licenseUrl>
+    <projectUrl>https://github.com/danielzsandberg/rubiks</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A toolset that allows you to write algorithms for the RAlgorithm app.</description>
+    <summary>A toolset that allows you to write algorithms for the RAlgorithm app.</summary>
+    <copyright>Copyright (c) 2013 Daniel Sandberg, Walter Praca</copyright>
+    <language>en-US</language>
+    <tags>rubiks</tags>
+    <dependencies>
+      <group targetFramework=".NETFramework4.5">
+        <dependency id="RubiksCore" version="1.0.0.2" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>

@@ -17,15 +17,14 @@ namespace CubeSolver.SystemTest
             int failureCount = 0;
             
             int trials = 1000;
-            ZZAutomatic2 algorithm = new ZZAutomatic2();
             List<Task> tasks = new List<Task>();
             for (int i = 0; i < trials; i++)
             {
                 tasks.Add(Task.Factory.StartNew((obj) => 
                 {
                     RubiksCube cube = new RubiksCube();
-                    cube.Shuffle();
-                    cube.Run("ZZAutomatic2");
+                    //cube.Shuffle();
+                    cube.Run("ZPhaseOne1");
                     bool wasCubeSolved = cube.IsSolved;
                     if (wasCubeSolved)
                     {
@@ -39,7 +38,7 @@ namespace CubeSolver.SystemTest
                     Console.WriteLine("Attempt {0}. Solved: {1}", trialNumber, wasCubeSolved);
                 }, i));
             }
-            Task.WaitAll(tasks.ToArray(), 60000);
+            Task.WaitAll(tasks.ToArray());
 
             Console.WriteLine("Success Count: {0} ({1}%)", successCount, ((double)successCount/trials) * 100);
             Console.WriteLine("Failure Count: {0} ({1}%)", failureCount, ((double)failureCount/trials) * 100);

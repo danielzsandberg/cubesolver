@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace TotalMove
 {
-    public class ZPhasePTwo3 : ICubeSolvingAlgorithm
+    public class ZPhasePTwo3 //: ICubeSolvingAlgorithm
     {
         public string AlgorithmName
         {
@@ -37,43 +37,13 @@ namespace TotalMove
            int rpt = 1;
            int rpu = 1;
  
-startingish:           
-            if (cube.GC(1, 5) != lle)
-            {
-                goto segue;
-            }
-            if (cube.GC(1, 3) != lle)
-            {
-                goto segue;
-            }
-            if (cube.GC(7, 5) != lri)
-            {
-                goto segue;
-            }
-            if (cube.GC(7, 3) != lri)
-            {
-                goto segue;
-            }
-            if (cube.GC(3, 1) != lup)
-            {
-                goto segue;
-            }
-            if (cube.GC(5, 1) != lup)
-            {
-                goto segue;
-            }
-            if (cube.GC(3, 7) != ldo)
-            {
-                goto segue;
-            }
-            if (cube.GC(5, 7) != ldo)
-            {
-                goto segue;
-            }
+startingish:
+            if (cube.GC(1, 5) != lle || cube.GC(1, 3) != lle || cube.GC(7, 5) != lri || cube.GC(7, 3) != lri)
+            { goto segue; }
+            if (cube.GC(3, 1) != lup || cube.GC(5, 1) != lup || cube.GC(3, 7) != ldo || cube.GC(5, 7) != ldo)
+            { goto segue; }
             else
-            {
-                goto endish;
-            }
+            { goto endish; }
 
 segue:                
             
@@ -205,12 +175,30 @@ antesnext:
                 rpu = rpu + 1;
                 goto startingish;
 endish:
+
                 cube.Run("TotalMoveUpLeft");
                 cube.Run("TotalMoveUpLeft");
+
+                if (cube.GC(5, 1) != cube.GC(4, 1) || cube.GC(3, 1) != cube.GC(4, 1) || cube.GC(1, 3) != cube.GC(1, 4) || cube.GC(1, 5) != cube.GC(1, 4))
+                {
+                    cube.Shuffle();
+                    cube.Run("ZPhaseOne1");
+                }
+                if (cube.GC(5, 7) != cube.GC(4, 7) || cube.GC(3, 7) != cube.GC(4, 7) || cube.GC(7, 3) != cube.GC(7, 4) || cube.GC(7, 5) != cube.GC(7, 4))
+                {
+                    cube.Shuffle();
+                    cube.Run("ZPhaseOne1");
+                }
+
                 cube.Run("ZPhaseThree");
-            //cube.Run("YNA");
-                //cube.Run("YNA");
+                //cube.Run("YAA");
+                //cube.Run("YAB");
 
             }
         }
     }
+
+
+
+
+

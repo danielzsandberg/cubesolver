@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace TotalMove
 {
-    public class YH : ICubeSolvingAlgorithm
+    public class YH //: ICubeSolvingAlgorithm
     {
         public string AlgorithmName
         {
@@ -36,6 +36,13 @@ namespace TotalMove
             cube.TurnRight(RubiksCore.TurningDirection.SixoClock);
             cube.TurnDown(RubiksCore.TurningDirection.SixoClock);
         
+            if(cube.GC(4,6) == cube.GC(4,1))
+                { cube.TurnFront(RubiksCore.TurningDirection.SixoClock); }
+            if (cube.GC(4, 6) == cube.GC(1, 4))
+                { cube.TurnFront(RubiksCore.TurningDirection.ThreeoClock); }
+            if (cube.GC(4, 6) == cube.GC(7, 4))
+                { cube.TurnFront(RubiksCore.TurningDirection.NineoClock); }
+
         }
     }
 }

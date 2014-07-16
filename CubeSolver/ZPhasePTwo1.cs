@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace TotalMove
 {
-    public class ZPhasePTwo1 : ICubeSolvingAlgorithm
+    public class ZPhasePTwo1 //: ICubeSolvingAlgorithm
     {
         public string AlgorithmName
         {
@@ -26,14 +26,19 @@ namespace TotalMove
 
         public void Solve(RubiksCore.RubiksCube cube)
         {
-//System.Diagnostics.Debugger.Launch();
+            //System.Diagnostics.Debugger.Launch();
 //            int cntrl = 0;
-            
-            startingish:
-            
+
+            int vfr = 1;
+            int vfl = 1;
+        startingish:
+            vfr++;
+            if (vfr == 50)
+            { cube.Run("ZPhaseOne1"); }
+
             int rpt = 1;
-do
-{
+            do
+            {
                 var lfr = cube.GC(4, 4);
                 var lle = cube.GC(1, 4);
                 var lup = cube.GC(4, 1);
@@ -59,7 +64,11 @@ do
                 {goto segue;}            
             if (cube.GC(5, 6) == ldo)
                 {goto endish;}            
-segue:            
+segue:
+            vfl++;
+            if (vfl == 50)
+            { cube.Run("ZPhaseOne1"); }
+
             {
                 rpt++;
             } 
@@ -536,10 +545,18 @@ while (rpt < 5);
             goto startingish;
             
             endish:
-            
-            cube.Run("YAA"); 
-            cube.Run("YAB");       
-            //cube.Run("ZPhasePTwo2");
+
+            if (cube.GC(3, 5) != cube.GC(4, 5))
+            {
+                cube.Shuffle();
+                cube.Run("ZPhaseOne1");
+            }
+
+
+
+            //cube.Run("YAA"); 
+            //cube.Run("YAB");       
+            cube.Run("ZPhasePTwo2");
         }
     }
 }
