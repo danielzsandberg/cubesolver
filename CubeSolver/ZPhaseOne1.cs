@@ -11,7 +11,7 @@ namespace TotalMove
     {
         public string AlgorithmName
         {
-            get { return "ZPhaseOne1"; }
+            get { return "Cube Solving Algorithm"; }
         }
 
         public string Author
@@ -21,7 +21,7 @@ namespace TotalMove
 
         public string Description
         {
-            get { return "First Section of the Cross."; }
+            get { return "Solves the Rubiks cube"; }
         }
 
         public void Solve(RubiksCore.RubiksCube cube)
